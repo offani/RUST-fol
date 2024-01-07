@@ -3,7 +3,7 @@
 use std::io; //standard io library 
 use rand::Rng; //Rng trait defines the random number generator implements
 use std::cmp::Ordering;
-
+//main begins 
 fn main(){
     println!("Geussing game start");
     
@@ -18,7 +18,7 @@ fn main(){
             .expect("Failed to read line");  // readline return a value ok or err to handle err we write expect cand be handled in a better way
         
         //let guess:u32= guess.trim().parse().expect("Please type a number !");//SAhadowing a variable 
-         
+        
         let guess:u32= match guess.trim().parse() {
             Ok(num) => num,
             Err(_) =>continue,
